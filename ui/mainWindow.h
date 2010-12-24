@@ -47,9 +47,12 @@
 //#include <QMainWindow>
 #include <QString>
 #include <QObject>
+<<<<<<< HEAD
 #include <QDialog>
 #include <QUdpSocket>
 #include <QTimer>
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 #include <QtNetwork>
 
 class World;
@@ -99,7 +102,10 @@ public slots:
 	void helpManual();
 	void helpAbout();
 	void helpAboutQT();
+<<<<<<< HEAD
 	void helpPolycrank();
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//-------------
 	void setTool( QAction *a );
 	void elementTurnOffCollisions();
@@ -135,10 +141,13 @@ public slots:
 	void irp6_server();
 	void newClient();
 	//-------------
+<<<<<<< HEAD
 	void PolycrankPanel();
 	void PolycrankSaver();
 	void PolycrankPlayer();
 	//-------------
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	void updateContactsList();
 	void contactSelected(int newSelection);
 	void clearContactsList();

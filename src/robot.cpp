@@ -888,11 +888,19 @@ Robot::invKinematics(const transf& targetPos, double* dofVals, int chainNum)
 		//check the convergence
 		if(factor < epsilon){
 			for(int k = 0; k < numDOF; ++k){
+<<<<<<< HEAD
 				//std::cout << "from: " << dofVals[k] << " to: " << currentJointVals[k];
 				//check if the joint value jumps to another one which is too far away of the previous one
 				if(fabs(dofVals[k] - currentDOFVals[k]) > upperBound){
 					//std::cout << "exceeds the upper bound at DOF: " << k << " , jumping to another pose\n";
 					return FAILURE;
+=======
+				//std::cout << "from: " << dofVals[k] << " to: " << currentDOFVals[k];
+				//check if the joint value jumps to another one which is too far away of the previous one
+				if(fabs(dofVals[k] - currentDOFVals[k]) > upperBound){
+					std::cout << "exceeds the upper bound at DOF: " << k << " , jumping to another pose\n";
+					//return FAILURE;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 				}
 				dofVals[k] = currentDOFVals[k];
 			}
@@ -916,10 +924,15 @@ Robot::invKinematics(const transf& targetPos, double* dofVals, int chainNum)
 		std::cout << "safeguard hit\n";
 		return FAILURE;
 	}
+<<<<<<< HEAD
 
 	
 //	chainVec[chainNum]->fwdKinematics(&currentJointVals[0], fwdK);
 /*
+=======
+	/*
+	chainVec[chainNum]->fwdKinematics(&currentJointVals[0], fwdK);
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	currentPos = fwdK[chainVec[chainNum]->getNumLinks() - 1];
 	std::cout << "in: " << currentPos.translation().x() << " " <<
 	currentPos.translation().y() << " " <<
@@ -928,7 +941,11 @@ Robot::invKinematics(const transf& targetPos, double* dofVals, int chainNum)
 	currentPos.rotation().x << " " <<
 	currentPos.rotation().y << " " <<
 	currentPos.rotation().z << " " << "\n";
+<<<<<<< HEAD
 */	
+=======
+	*/
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	return SUCCESS;
 }
 
@@ -1210,7 +1227,11 @@ Robot::readDOFVals(QTextStream &is)
 			return is;
 		}
 	}
+<<<<<<< HEAD
 	std::cout << "Robot::readDOFVals \n";
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	// This is a somewhat contorted way of doing things, but this is the only mechanism available
 	// for actually moving the DOFs 
 	double *jointVals = new double[numJoints];
@@ -1260,8 +1281,11 @@ Robot::interpolateJoints(double *initialVals, double *finalVals,
 {
 	double *currentVals = new double[ getNumJoints() ];
 	double minDist,t = 0.0,deltat = 1.0;
+<<<<<<< HEAD
 
 std::cout << "Robot::interpolateJoints" << "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	while (deltat > 1.0e-20 && t >= 0) {
 
 		DBGP("DOF joint interpolation cycle")
@@ -2015,7 +2039,10 @@ Robot::updateJointValuesFromDynamics()
 			jointVals[ chainVec[f]->getJoint(j)->getNum() ] = chainVec[f]->getJoint(j)->getDynamicsVal();
 		}
 	}
+<<<<<<< HEAD
 	std::cout << "Robot::updateJointValuesFromDynamics" << "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//set the joint themselves
 	setJointValues(jointVals);
 

@@ -110,10 +110,13 @@ signals:
   //! Emitted by moveDOFToCOntacts each time a step is taken
   void moveDOFStepTaken(int numCols, bool &stopRequest);
 
+<<<<<<< HEAD
 public:
   //! A vector of pointers to this robot's kinematic chains
   std::vector<KinematicChain *> chainVec;
 
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 private:
   // Connection to a parent robot 
   //! Points to a parent robot that this robot is attached to
@@ -135,7 +138,11 @@ protected:
   //! The total number of joints of this robot. Set when robot is loaded
   int numJoints;
   //! A vector of pointers to this robot's kinematic chains
+<<<<<<< HEAD
   //std::vector<KinematicChain *> chainVec;
+=======
+  std::vector<KinematicChain *> chainVec;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   //! A vector of pointers to this robot's DOF's
   std::vector<DOF *> dofVec;
   //! A pointer to the base link (or palm) of the robot
@@ -531,7 +538,10 @@ void Robot::updateDofVals(double *dofVals)
 */
 void Robot::setJointValues(const double* jointVals)
 {
+<<<<<<< HEAD
 	//std::cout<< "Robot::setJointValues"<<"\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	for (int c=0; c<numChains; c++) {
 		chainVec[c]->setJointValues(jointVals);
 	}
@@ -544,7 +554,10 @@ void Robot::setJointValues(const double* jointVals)
 */
 void Robot::setJointValuesAndUpdate(const double* jointVals)
 {
+<<<<<<< HEAD
 	//std::cout<< "Robot::setJointValuesAndUpdate" << "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	for (int c=0; c<numChains; c++) {
 		chainVec[c]->setJointValues(jointVals);
 		chainVec[c]->updateLinkPoses();
@@ -624,8 +637,11 @@ void Robot::storeDOFVals(double *dofVals) const {
 */
 void Robot::forceDOFVal(int dofNum,double val) {
 	double *jointVals = new double[numJoints];
+<<<<<<< HEAD
 
 	//std::cout << "forceDOFVal" << "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	getJointValues(jointVals);
 	dofVec[dofNum]->reset();
 	dofVec[dofNum]->accumulateMove(val, jointVals, NULL);
@@ -639,7 +655,10 @@ void Robot::forceDOFVal(int dofNum,double val) {
 */
 void Robot::forceDOFVals(double *dofVals) {
 	double *jointVals = new double[numJoints];
+<<<<<<< HEAD
 	//std::cout << "Robot::forceDOFVals" << "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	getJointValues(jointVals);
 	for (int d=0; d<numDOF; d++) {
 		dofVec[d]->reset();

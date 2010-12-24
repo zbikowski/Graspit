@@ -229,9 +229,13 @@ class IVmgr : public QWidget {
 
   //! static callback routine for pick events (before selections or deselections)
   static SoPath *pickFilterCB(void *,const SoPickedPoint *pick);
+<<<<<<< HEAD
 public:
 //void makeJointDraggers(Robot *robot,KinematicChain *chain);
 //void makeHandleBox(WorldElement *selectedElement,Body *surroundMe);
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 public slots:
   void drawDynamicForces();
   void drawWorstCaseWrenches();
@@ -241,7 +245,10 @@ public slots:
   void restoreCameraPos();
 
 public:
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   IVmgr(QWidget *parent=0,const char *name=0,Qt::WFlags f=0);
   ~IVmgr();
 

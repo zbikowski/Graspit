@@ -38,6 +38,18 @@
 #define GRASP_PRESHAPE_H
 
 /* finger angles of preshape types for
+<<<<<<< HEAD
+=======
+   BIRD HAND */
+#define PR_bird_circle_Angle 54.31
+#define PR_bird_two_opp_one_Angle 0.0
+
+/* finger angles of preshape types for
+   TFG HAND */
+#define PR_tfg 0.0
+
+/* finger angles of preshape types for
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
    BARRETT HAND */
 #define PR_circle_Angle 60.0
 #define PR_circle_F1 0.0

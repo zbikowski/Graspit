@@ -446,6 +446,7 @@
           <string>Misc.</string>
         </property>
         <addaction name="dynamicsArch_BuilderAction" />
+<<<<<<< HEAD
   		<addaction name="separator"/>
 		<addaction name="actionIRp6_server"/>
       </widget>
@@ -459,6 +460,11 @@
 		<addaction name="separator" />
 		<addaction name="PolycrankPlayerAction" />
       </widget>
+=======
+		<addaction name="separator"/>
+		<addaction name="actionIRp6_server"/>
+      </widget>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
       <widget class="QMenu" name="helpMenu" >
         <property name="title" >
           <string>&amp;Help</string>
@@ -467,7 +473,10 @@
         <addaction name="separator" />
         <addaction name="helpAboutAction" />
         <addaction name="helpAboutQTAction" />
+<<<<<<< HEAD
         <addaction name="helpPolycrankAction" />
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
       </widget>
       <addaction name="fileMenu" />
       <addaction name="elementMenu" />
@@ -476,7 +485,10 @@
       <addaction name="Sensors" />
       <addaction name="Stereo" />
       <addaction name="Misc" />
+<<<<<<< HEAD
 	  <addaction name="Polycrank" />
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
       <addaction name="helpMenu" />
     </widget>
     <action name="fileNewAction" >
@@ -814,6 +826,7 @@
         <string>About &amp;QT...</string>
       </property>
     </action>
+<<<<<<< HEAD
 
     <action name="helpPolycrankAction" >
       <property name="name" >
@@ -827,6 +840,8 @@
       </property>
     </action>
     
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
     <action name="fileImport_Human_HandAction" >
       <property name="name" >
         <cstring>fileImport_Human_HandAction</cstring>
@@ -849,6 +864,7 @@
         <string>Arch Builder...</string>
       </property>
     </action>
+<<<<<<< HEAD
 
     <action name="PolycrankPanelAction" >
       <property name="name" >
@@ -887,6 +903,8 @@
       </property>
     </action>
     
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
     <action name="sensorsSensor_InputAction" >
       <property name="name" >
         <cstring>sensorsSensor_InputAction</cstring>
@@ -1033,7 +1051,11 @@
         <string>Database Planner...</string>
       </property>
     </action>
+<<<<<<< HEAD
     <action name="actionIRp6_server">
+=======
+	<action name="actionIRp6_server">
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	<property name="text">
 		<string>IRp6 Server Start</string>
 	</property>

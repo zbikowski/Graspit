@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 Polycrank windows was added by Mariusz Żbikowski. After you download graspit go 
 to manual and instalation chapter. Instalation strongly depends on platfomrs.
 
  
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
                                  GraspIt!
                               Version 2.1.0 
 
@@ -74,3 +77,7 @@ xmlconverter/ -  A stand-alone utility for converting old GraspIt files
 Troubleshooting
 ---------------
 Please check the user manual for troubleshooting and contact information!
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56

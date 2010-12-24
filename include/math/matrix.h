@@ -111,8 +111,12 @@ public:
 	void copyMatrix(const Matrix &m){copySubMatrix(0, 0, m);}
 
 	friend std::ostream& operator<<(std::ostream &os, const Matrix &m);
+<<<<<<< HEAD
 	void print(FILE *fp) const;//improve Mariusz ¯bikowski, mzbikows@gmail.com
 	//void print(FILE *fp = stderr) const;
+=======
+	void print(FILE *fp = stderr) const;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 	//! Computes the rank of the matrix using SVD
 	int rank() const;

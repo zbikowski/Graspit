@@ -1649,7 +1649,10 @@ World::turnOffDynamics()
 	idleSensor = NULL;
 	dynamicsOn = false;
 	for (int i=0; i<numRobots; i++) {
+<<<<<<< HEAD
 		std::cout<< "weszlo!!!!!!!!!!"<< "\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		//actually set joint values
 		robotVec[i]->updateJointValuesFromDynamics();
 		//try to approximate robot dof values based on where the joints ended up

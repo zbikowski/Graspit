@@ -59,7 +59,10 @@ class TiXmlElement;
 	poses.
 */
 class KinematicChain {
+<<<<<<< HEAD
 //Q_OBJECT
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   //! Pointer to the robot that this chain is a part of
   Robot *owner;
   
@@ -74,8 +77,19 @@ class KinematicChain {
   //! The number of degrees of freedom in the chain
   int numDOF;
 
+<<<<<<< HEAD
   //! The number of links in the chain
   int numLinks;
+=======
+  //! The number of joints in the chain
+  int numJoints;
+
+  //! The number of links in the chain
+  int numLinks;
+  
+  //! A vector of pointers to the joints in the chain
+  std::vector<Joint *> jointVec;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
   //! A vector of pointers to the links in the chain
   std::vector<Link *> linkVec;
@@ -115,6 +129,7 @@ class KinematicChain {
   //! Creates a list of the dynamic joints that make up this chain
   void getDynamicJoints(std::vector<DynJoint*> *dj) const;
  
+<<<<<<< HEAD
 	//! The number of joints in the chain
 	int numJoints;
   
@@ -123,12 +138,18 @@ public:
 	std::vector<Joint *> jointVec;
 
   //friend class PolycrankSenderDlg;
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 public:
   /*! The constructor is called from a robot's load method, and requires a
       a pointer to the robot owning this chain, and the index of which chain
       this is within the robot.*/
   KinematicChain(Robot *r,int chainNumber, int jointNum);
+<<<<<<< HEAD
   //KinematicChain();
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   ~KinematicChain();
 
   //! Builds the complete link jacobian wrt to dynamic joints of this chain.

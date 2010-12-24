@@ -308,7 +308,11 @@ IVmgr::setStereoWindow(QWidget *parent)
 IVmgr::~IVmgr()
 {
   if (camerafp) fclose(camerafp);
+<<<<<<< HEAD
   //std::cout << "deleting IVmgr" << std::endl;
+=======
+  std::cout << "deleting IVmgr" << std::endl;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   selectionRoot->deselectAll();
   delete world;
   junk->unref();
@@ -690,8 +694,11 @@ IVmgr::transRot(DraggerInfo *dInfo)
 	world->updateGrasps();
 
 	DBGP("new pos: "<<dInfo->selectedElement->getTran());
+<<<<<<< HEAD
 	//std::cout << " New pos : " << dInfo->selectedElement->getTran() << "\n";
 	
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	if (translating) {
 		SbVec3f newPos = (origRotation.inverse() * dInfo->selectedElement->getTran().translation()).toSbVec3f();
 		newPos[0]/=scale[0];
@@ -699,7 +706,10 @@ IVmgr::transRot(DraggerInfo *dInfo)
 		newPos[2]/=scale[2];
 		dInfo->lastTran = newPos;
 		myHandleBox->translation.setValue(newPos);
+<<<<<<< HEAD
 		
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	} else {
 		SbRotation newRot = dInfo->selectedElement->getTran().rotation().toSbRotation();
 		dInfo->lastRot = newRot;
@@ -968,11 +978,14 @@ IVmgr::makeHandleBox(WorldElement *selectedElement,Body *surroundMe)
   SoSeparator *sep = new SoSeparator;
   draggerRoot->addChild(sep);
 
+<<<<<<< HEAD
   std::cout << "IVmgr::makeHandleBox \n";
   std::cout << "IVmgr::IVMGR = " << ivmgr << "\n";
   std::cout << "IVmgr::Selected element " << selectedElement << "\n";	
   std::cout << "IVmgr::Selected element " << selectedElement->getName().toStdString() << "\n";	
 
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   // Elminate many parts of the handlebox that would allow body scaling etc...
   SoHandleBoxDragger *myHandleBox = new SoHandleBoxDragger;
   myHandleBox->setPart("extruder1",new SoSeparator);
@@ -1049,7 +1062,11 @@ IVmgr::makeHandleBox(WorldElement *selectedElement,Body *surroundMe)
 
   sep->addChild(draggerTran);
   sep->addChild(myHandleBox);
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   DraggerInfo *dInfo = new DraggerInfo;
   dInfo->draggerSep = sep;
   dInfo->dragger = myHandleBox;
@@ -1062,7 +1079,11 @@ IVmgr::makeHandleBox(WorldElement *selectedElement,Body *surroundMe)
   //with motion callback which is a lot more stable. if you need the 
   //functionality of the valueChanged callback, beware of erratic
   //behavior where the callback is called again and again for no reason.
+<<<<<<< HEAD
     //myHandleBox->addValueChangedCallback(transRotCB,dInfo);
+=======
+  //  myHandleBox->addValueChangedCallback(transRotCB,dInfo);
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   myHandleBox->addMotionCallback(transRotCB,dInfo);  
 }
 
@@ -1083,6 +1104,7 @@ IVmgr::makeJointDraggers(Robot *robot,KinematicChain *chain)
   DraggerInfo *dInfo;
   bool firstDragger=true;
 
+<<<<<<< HEAD
   //std::cout << "IVmgr::makeJointDraggers \n";
 
   //jointDraggerSep->ref();
@@ -1092,16 +1114,29 @@ IVmgr::makeJointDraggers(Robot *robot,KinematicChain *chain)
   //std::cout << "robot->getNumDOF() = " << robot->getNumDOF() << "\n";
 
 for (d=0;d<robot->getNumDOF();d++)
+=======
+ // jointDraggerSep->ref();
+  jointDraggerSep->addChild(robot->getBase()->getIVTran());
+  jointDraggerSep->addChild(chain->getIVTran());
+
+  for (d=0;d<robot->getNumDOF();d++)
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
     activeDOFs[d] = -1;
 
   for (j=chain->getNumJoints()-1;j>=0;j--)
     activeDOFs[chain->getJoint(j)->getDOFNum()] = j;
+<<<<<<< HEAD
 	//std::cout << "j = " << j << "\n";
   for(d=0;d<robot->getNumDOF();d++) {
 
 	  //std::cout << "d = " << d << "\n";
 
 	if ((j=activeDOFs[d]) != -1) {
+=======
+	
+  for(d=0;d<robot->getNumDOF();d++) {
+    if ((j=activeDOFs[d]) != -1) {
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
       SoSeparator *sep = new SoSeparator;
       dInfo = new DraggerInfo;
       dInfo->selectedElement = robot;
@@ -1121,14 +1156,21 @@ for (d=0;d<robot->getNumDOF();d++)
       //      for (l=0;l<chain->getNumLinks();l++)
       //	if (j<=chain->getLastJoint(l)) break;
 
+<<<<<<< HEAD
       if (chain->getJoint(j)->getType() == REVOLUTE) 
 	  {
 		//std::cout << "REVOLUTE\n";  
+=======
+      if (chain->getJoint(j)->getType() == REVOLUTE) {
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		SoScale *dialSize = new SoScale;
 		SoRotateDiscDragger *myDisc = new SoRotateDiscDragger;
 
 		float scale = robot->getDOFDraggerScale(d);
+<<<<<<< HEAD
 		//std::cout << "scale = " << scale << "\n";  
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		dialSize->scaleFactor.setValue(SbVec3f(scale,scale,scale));
        	SoTranslation *dTrans = new SoTranslation;
 		dTrans->translation.setValue(0,0,chain->getJoint(j)->getDH()->getD());
@@ -1145,9 +1187,13 @@ for (d=0;d<robot->getNumDOF();d++)
 		myDisc->addFinishCallback(revoluteJointFinishedCB,dInfo);
 		dInfo->dragger = myDisc;
       }
+<<<<<<< HEAD
       else 
 	  { // prismatic
 		//std::cout << "PRISMATIC\n";  
+=======
+      else { // prismatic
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		SoTransform *arrowTran = new SoTransform;
 		SoTranslate1Dragger *myArrow = new SoTranslate1Dragger;
 		SoBaseColor *arrowBC = new SoBaseColor;
@@ -1166,11 +1212,19 @@ for (d=0;d<robot->getNumDOF();d++)
 		dInfo->dragger = myArrow;
       }
       // now it will update its IVTran whenever it moves
+<<<<<<< HEAD
         chain->getJoint(j)->setDraggerAttached(true);
 
         jointDraggerSep->addChild(sep);
         jointDraggerSep->addChild(chain->getJoint(j)->getIVTran());
         draggerInfoList.push_back(dInfo);
+=======
+      chain->getJoint(j)->setDraggerAttached(true);
+
+      jointDraggerSep->addChild(sep);
+      jointDraggerSep->addChild(chain->getJoint(j)->getIVTran());
+      draggerInfoList.push_back(dInfo);
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
     }
   }
   draggerRoot->addChild(jointDraggerSep);
@@ -1189,7 +1243,10 @@ for (d=0;d<robot->getNumDOF();d++)
 void
 IVmgr::drawWireFrame(SoSeparator *elementRoot)
 {
+<<<<<<< HEAD
   //std::cout << "IVmgr::drawWireFrame \n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   SoLightModel *lm = new SoLightModel;
   lm->model = SoLightModel::BASE_COLOR;
 
@@ -1231,7 +1288,10 @@ IVmgr::pickFilter(const SoPickedPoint *pick)
       p->getTail()->isOfType(SoTransformManip::getClassTypeId()))
     {
 	  DBGP("dragger or manip picked");
+<<<<<<< HEAD
 	  //std::cout << "dragger or manip picked\n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
       SoPath *newP = new SoPath(sceneRoot);
       return newP;
     }
@@ -1309,7 +1369,11 @@ IVmgr::handleSelection(SoPath *p)
   int r,b,f;
   bool selectionFound=false;
   Robot *robot;
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 #ifdef GRASPITDBG	  
   printf("in selectionCB: \n");
   fprintf(stderr,"in selectionCB: \n");
@@ -1341,17 +1405,24 @@ IVmgr::handleSelection(SoPath *p)
 	    if (currTool == ROTATE_TOOL)
 	      makeCenterball(robot,robot->getBase());
 	    else if (currTool == TRANSLATE_TOOL)
+<<<<<<< HEAD
 		{
 		  //std::cout<<"IVmgr::handleSelection --  makeHandleBox(robot,robot->getBase());  \n";
 	      makeHandleBox(robot,robot->getBase());
 		}
+=======
+	      makeHandleBox(robot,robot->getBase());
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	    else if (currTool == SELECT_TOOL) {
 	      world->selectElement(robot);
 	      drawWireFrame(robot->getIVRoot());
 	    }
 	  }
       else {
+<<<<<<< HEAD
 		//std::cout<<"IVmgr::handleSelection -- makeJointDraggers(robot,robot->getChain(f)  \n";
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		for (f=0;f<robot->getNumChains();f++)
 		  if (p->getTail() == robot->getChain(f)->getIVRoot()) {
 			 selectionFound = true;
@@ -1366,10 +1437,15 @@ IVmgr::handleSelection(SoPath *p)
 					world->selectTendon( ((HumanHand*)robot)->getTendon(f));
 				}
 		}
+<<<<<<< HEAD
 
 	  }
 	}
 
+=======
+	  }
+	}
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
     if (!selectionFound) {
       // check if one of the objects was selected
       for (b=0;b<world->getNumBodies();b++)
@@ -1379,6 +1455,7 @@ IVmgr::handleSelection(SoPath *p)
 //#endif
 	  selectionFound = true;
 	  if (currTool == ROTATE_TOOL)
+<<<<<<< HEAD
 	  {
 		//std::cout<<"IVmgr::handleSelection --  ROTATE_TOOL \n";
 	    makeCenterball(world->getBody(b),world->getBody(b));
@@ -1395,6 +1472,15 @@ IVmgr::handleSelection(SoPath *p)
 	    drawWireFrame(world->getBody(b)->getIVRoot());
 	  }
 
+=======
+	    makeCenterball(world->getBody(b),world->getBody(b));
+	  else if (currTool == TRANSLATE_TOOL)
+	    makeHandleBox(world->getBody(b),world->getBody(b));
+	  else if (currTool == SELECT_TOOL) {
+	    world->selectElement(world->getBody(b));
+	    drawWireFrame(world->getBody(b)->getIVRoot());
+	  }
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	  break;
 	}
     }
@@ -1415,7 +1501,11 @@ IVmgr::handleDeselection(SoPath *p)
   Robot *robot;
   WorldElement *deselectedElement=NULL;
   std::list<DraggerInfo *>::iterator dp;
+<<<<<<< HEAD
   //std::cout << "deselct\n";
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 #ifdef GRASPITDBG	  
   printf("in deselectionCB: \n");
 #endif
@@ -1881,7 +1971,10 @@ void
 IVmgr::revoluteJointClickedCB(void *dInfo,SoDragger *dragger)
 {
   ((DraggerInfo *)dInfo)->dragger = dragger;  //to avoid compiler warning
+<<<<<<< HEAD
   //std::cout << "IVmgr::revoluteJointClickedCB\n" ;
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   ivmgr->revoluteJointClicked((DraggerInfo *)dInfo);
 }
 

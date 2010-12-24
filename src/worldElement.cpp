@@ -44,6 +44,10 @@
 #include "contact.h"
 #include "collisionInterface.h"
 #include "mcGrip.h"
+<<<<<<< HEAD
+=======
+#include "irp6.h"
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 //#include "harvardHand.h"
 
@@ -350,6 +354,11 @@ WorldElement::createInstance(const QString &className,
 	return new Shadow(parent,name);
   else if (className == "McGrip")
 	return new McGrip(parent,name);
+<<<<<<< HEAD
+=======
+  else if (className == "IRp6")
+	return new IRp6(parent,name);
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
   else return NULL;
 }
 

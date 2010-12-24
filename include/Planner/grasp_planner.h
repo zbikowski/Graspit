@@ -40,7 +40,11 @@
 /* Starting distance is the (double) distance, in which
    the hand is placed acc to the object before grasping. 
    The distance is measured from the surface of the object. */
+<<<<<<< HEAD
 #define STARTING_DISTANCE 80.0
+=======
+#define STARTING_DISTANCE 160.0
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 /* When grasping an axially symmetric object, the 360degrees
    are approximated with NR_OF_360_DEG_STEPS steps. 

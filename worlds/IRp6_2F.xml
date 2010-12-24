@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<world>
+	<obstacle>
+		<filename>models/obstacles/floor.xml</filename>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[-2320.07 -5611 -430.029]</fullTransform>
+		</transform>
+	</obstacle>
+	<obstacle>
+		<filename>models/obstacles/table012.xml</filename>
+		<transform>
+			<fullTransform>(+0.707107 +0 +0 -0.707107)[-750 -975 +259.981]</fullTransform>
+		</transform>
+	</obstacle>
+	<graspableBody>
+		<filename>models/objects/RubikCube.xml</filename>
+		<transform>
+			<fullTransform>(+0.573264 +0.414724 -0.568095 +0.420286)[-121.11 -875.092 +529.999]</fullTransform>
+		</transform>
+	</graspableBody>
+	<obstacle>
+		<filename>models/objects/book.xml</filename>
+		<transform>
+			<fullTransform>(+0 +0.709895 +0 +0.704308)[-104.758 -843.014 +491.07]</fullTransform>
+		</transform>
+	</obstacle>
+	<robot>
+		<filename>models/robots/My2FGripper/2FGripper.xml</filename>
+		<dofValues>+15 +1 +14.95 +0 </dofValues>
+		<transform>
+			<fullTransform>(-0.00536311 -0.988185 +0.153174 -0.000186511)[-109.707 -838.987 +563.121]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>-1.70084 +0.0701286 +0.308735 -0.389596 +0.000118354 -1.39328 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +0 +0]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>+0 +0 +0 +0 +0 +0 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 -1950 +0]</fullTransform>
+		</transform>
+	</robot>
+	<connection>
+		<parentRobot>+1</parentRobot>
+		<parentChain>+0</parentChain>
+		<childRobot>+0</childRobot>
+		<transform>
+			<fullTransform>(+0.707107 +0 +0 +0.707107)[+0 +0 +70]</fullTransform>
+		</transform>
+	</connection>
+	<camera>
+		<position>-102.953 -1573.34 +628.295</position>
+		<orientation>+0.683869 -0.026882 -0.038735 +0.72808</orientation>
+		<focalDistance>+1651.5</focalDistance>
+	</camera>
+</world>

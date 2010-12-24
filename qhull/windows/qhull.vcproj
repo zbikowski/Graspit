@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
+<<<<<<< HEAD
 	Version="9,00"
 	Name="qhull"
 	ProjectGUID="{238A84F1-18DF-4A24-8B40-4FA23F4E9533}"
 	TargetFrameworkVersion="131072"
+=======
+	Version="8,00"
+	Name="qhull"
+	ProjectGUID="{238A84F1-18DF-4A24-8B40-4FA23F4E9533}"
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	>
 	<Platforms>
 		<Platform

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<world>
+	<obstacle>
+		<filename>models/obstacles/floor.xml</filename>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[-2320.07 -3611 -430.029]</fullTransform>
+		</transform>
+	</obstacle>
+	<obstacle>
+		<filename>models/obstacles/table012.xml</filename>
+		<transform>
+			<fullTransform>(+0.707107 +0 +0 -0.707107)[-750 +1105 +259.981]</fullTransform>
+		</transform>
+	</obstacle>
+	<graspableBody>
+		<filename>models/objects/RubikCube.xml</filename>
+		<transform>
+			<fullTransform>(+0.718731 +0.0255601 -0.694233 +0.0285173)[-122.226 +946.76 +608.245]</fullTransform>
+		</transform>
+	</graspableBody>
+	<obstacle>
+		<filename>models/objects/book.xml</filename>
+		<transform>
+			<fullTransform>(+0 +0.709895 +0 +0.704308)[-103.47 +942.94 +564.083]</fullTransform>
+		</transform>
+	</obstacle>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>+1.64327 +0.209188 -0.21923 +0.0130315 +0.034727 +0.0188364 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +0 +0]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyBirdHand/BirdHand.xml</filename>
+		<dofValues>+0 +0 +0 +0 +0 +0 +0 +0 </dofValues>
+		<transform>
+			<fullTransform>(+0.0172763 +0.0267837 -0.999489 +0.00228554)[-73.7546 +951.206 +836.323]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>+0 +0 +0 +0 +0 +0 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +2080 +0]</fullTransform>
+		</transform>
+	</robot>
+	<connection>
+		<parentRobot>+0</parentRobot>
+		<parentChain>+0</parentChain>
+		<childRobot>+1</childRobot>
+		<mountFilename>models/robots/MyBirdHand/iv/birdhandmount.xml</mountFilename>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +0 +40]</fullTransform>
+		</transform>
+	</connection>
+	<camera>
+		<position>+352.708 +1387.75 +942.088</position>
+		<orientation>+0.220006 +0.508659 +0.77219 +0.310782</orientation>
+		<focalDistance>+646.177</focalDistance>
+	</camera>
+</world>

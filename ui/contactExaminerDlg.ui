@@ -96,7 +96,11 @@
     </rect>
    </property>
    <property name="text" >
+<<<<<<< HEAD
     <string>ExitMariusz</string>
+=======
+    <string>Exit</string>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
    </property>
   </widget>
   <widget class="QGroupBox" name="contactLoadingGroupBox" >

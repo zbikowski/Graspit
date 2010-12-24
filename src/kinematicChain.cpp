@@ -24,7 +24,11 @@
 //######################################################################
 
 #include "kinematicChain.h"
+<<<<<<< HEAD
 #include <QDebug>
+=======
+
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 #include "matvec3D.h"
 #include "body.h"
 #include "robot.h"
@@ -52,7 +56,10 @@
 KinematicChain::KinematicChain(Robot *r,int chainNumber, int jointNum) : owner(r),chainNum(chainNumber),
     numJoints(0),numLinks(0),lastJoint(NULL), IVRoot(NULL),numChildren(0), firstJointNum(jointNum)
 {
+<<<<<<< HEAD
 	//qDebug() << "konstruktor kinemtic Chain()"; 
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 }
 
 /*!
@@ -419,6 +426,7 @@ KinematicChain::getJointValues(double *jointVals) const
 void
 KinematicChain::setJointValues(const double *jointVals)
 {
+<<<<<<< HEAD
 	//std::cout << "KinematicChain::setJointValues \n";
 	for (int j=0; j<numJoints; j++) 
 	{
@@ -427,6 +435,11 @@ KinematicChain::setJointValues(const double *jointVals)
 		//std::cout << jointVec[j]->getVal() << " ";
 	}
 	//std::cout << "\n";
+=======
+	for (int j=0; j<numJoints; j++) {
+		jointVec[j]->setVal( jointVals[firstJointNum + j] );
+	}
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 }
 
 /*! Computes forward kinematics for the current joint values, then
@@ -534,7 +547,10 @@ KinematicChain::infinitesimalMotion(const double *jointVals, std::vector<transf>
 	double eps = 1.0e-6;
 	for(int j=0; j<numJoints; j++) {
 		int sign;
+<<<<<<< HEAD
 qDebug() << "jointVec[ " << j << " ]= " << jointVec[j]->getVal();
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		if ( jointVals[firstJointNum + j] + eps < jointVec[j]->getVal() ) {
 			sign = -1;
 		} else if ( jointVals[firstJointNum + j] > jointVec[j]->getVal() + eps ) {

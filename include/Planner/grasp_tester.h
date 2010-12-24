@@ -38,7 +38,11 @@
 #define GRASP_TESTER_H
 
 /* Minimum quality to accept grasp as stable. */
+<<<<<<< HEAD
 #define QUALITY_MIN_THRESHOLD 0.0
+=======
+#define QUALITY_MIN_THRESHOLD 0.01
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 /* When a grasp is initially unstable, grasp_tester tries to
    step back from the object several times and determines the

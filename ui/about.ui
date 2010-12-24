@@ -45,7 +45,11 @@
           <item>
             <widget class="QLabel" name="pixmapLabel1" >
               <property name="pixmap" >
+<<<<<<< HEAD
                 <pixmap>polycrank.png</pixmap>
+=======
+                <pixmap>logo.png</pixmap>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
               </property>
               <property name="scaledContents" >
                 <bool>true</bool>

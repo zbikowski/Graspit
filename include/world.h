@@ -71,9 +71,12 @@ class SoSensor;
  */
 class World : public QObject {
   Q_OBJECT ;
+<<<<<<< HEAD
 public:
   //! A vector of pointers to the robots defined within this world
   std::vector<Robot *> robotVec;      
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 protected:
   //! Pointer to the IVmgr who controls the simulation
@@ -89,7 +92,11 @@ protected:
   std::vector<GraspableBody *> GBVec;
 
   //! A vector of pointers to the robots defined within this world
+<<<<<<< HEAD
   //std::vector<Robot *> robotVec;        
+=======
+  std::vector<Robot *> robotVec;        
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
   //! A vector of pointers to the hands defined within this world
   std::vector<Hand *> handVec;

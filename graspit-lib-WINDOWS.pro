@@ -19,9 +19,15 @@ mkl {
 	}
 	QMAKE_LIBDIR += $(CLAPACKDIR)/ia32/lib $(CLAPACKDIR)/LIB/Win32
 	graspitdbg {
+<<<<<<< HEAD
 		LIBS += BLASd.lib clapackd.lib
 	} else {
 		LIBS += BLAS.lib clapack.lib
+=======
+		LIBS += BLASd.lib clapackd.lib libf2cd.lib
+	} else {
+		LIBS += BLAS.lib clapack.lib libf2c.lib
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	}
 	INCLUDEPATH += $(CLAPACKDIR)/include
 	HEADERS += include/lapack_wrappers.h
@@ -34,9 +40,15 @@ mkl {
 # ---------------------- General libraries and utilities ----------------------------------
 
 graspitdbg {
+<<<<<<< HEAD
 	LIBS += qhull/windows/Debug/qhull.lib $(COINDIR)/lib/Coin3d.lib $(COINDIR)/lib/SoQt1d.lib
 } else {
 	LIBS += qhull/windows/Release/qhull.lib $(COINDIR)/lib/Coin3.lib $(COINDIR)/lib/SoQt1.lib
+=======
+	LIBS += qhull/windows/Debug/qhull.lib $(COINDIR)/lib/Coin2d.lib $(COINDIR)/lib/SoQt1d.lib
+} else {
+	LIBS += qhull/windows/Release/qhull.lib $(COINDIR)/lib/Coin2.lib $(COINDIR)/lib/SoQt1.lib
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 }
 
 DEFINES	+= COIN_DLL SOQT_DLL WIN32
@@ -48,12 +60,21 @@ DEFINES 	+= _CRT_SECURE_NO_DEPRECATE
 #------------------------------------ add-ons --------------------------------------------
 
 mosek {
+<<<<<<< HEAD
 	!exists($(MOSEK5_0_INSTALLDIR)) {
 		error("Mosek not installed or MOSEK5_0_INSTALLDIR environment variable not set")
 	}
 	INCLUDEPATH += $(MOSEK5_0_INSTALLDIR)/tools/platform/win/h
 	#no separate debug or release versions of the lib
 	LIBS += $(MOSEK5_0_INSTALLDIR)/tools/platform/win/dll/mosek5_0.lib
+=======
+	!exists($(MOSEK6_0_INSTALLDIR)) {
+		error("Mosek not installed or MOSEK6_0_INSTALLDIR environment variable not set")
+	}
+	INCLUDEPATH += $(MOSEK6_0_INSTALLDIR)/tools/platform/win32x86/h
+	#no separate debug or release versions of the lib
+	LIBS += $(MOSEK6_0_INSTALLDIR)/tools/platform/win32x86/bin/mosek6_0.lib
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 }
 
 boost {

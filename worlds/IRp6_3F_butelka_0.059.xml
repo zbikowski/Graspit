@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<world>
+	<obstacle>
+		<filename>models/obstacles/floor.xml</filename>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[-2320.07 -3611 -430.029]</fullTransform>
+		</transform>
+	</obstacle>
+	<obstacle>
+		<filename>models/obstacles/table012.xml</filename>
+		<transform>
+			<fullTransform>(+0.707107 +0 +0 -0.707107)[-750 +1105 +259.981]</fullTransform>
+		</transform>
+	</obstacle>
+	<graspableBody>
+		<filename>models/objects/waterBottle.xml</filename>
+		<transform>
+			<fullTransform>(+0.448231 -0.359001 +0.784494 +0.234045)[-70.8803 +985.883 +622.923]</fullTransform>
+		</transform>
+	</graspableBody>
+	<obstacle>
+		<filename>models/objects/book.xml</filename>
+		<transform>
+			<fullTransform>(+0 +0.709895 +0 +0.704308)[-103.82 +948.217 +519.809]</fullTransform>
+		</transform>
+	</obstacle>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>+1.63781 +0.172395 -0.0393193 -0.173255 +0.0245656 +0.753645 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +0 +0]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyBirdHand/BirdHand.xml</filename>
+		<dofValues>+0 +0.3375 +0.16875 +0 +0.235 +0.1175 +0.2325 +0.11625 </dofValues>
+		<transform>
+			<fullTransform>(+0.0192734 -0.336286 -0.941466 -0.0135206)[-66.0782 +935.07 +752.139]</fullTransform>
+		</transform>
+	</robot>
+	<robot>
+		<filename>models/robots/MyIrp6/Irp6.xml</filename>
+		<dofValues>+0 +0 +0 +0 +0 +0 </dofValues>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +2080 +0]</fullTransform>
+		</transform>
+	</robot>
+	<connection>
+		<parentRobot>+0</parentRobot>
+		<parentChain>+0</parentChain>
+		<childRobot>+1</childRobot>
+		<mountFilename>models/robots/MyBirdHand/iv/birdhandmount.xml</mountFilename>
+		<transform>
+			<fullTransform>(+1 +0 +0 +0)[+0 +0 +40]</fullTransform>
+		</transform>
+	</connection>
+	<camera>
+		<position>+473.914 +757.116 +702.186</position>
+		<orientation>+0.578155 +0.397173 +0.401799 +0.588684</orientation>
+		<focalDistance>+584.688</focalDistance>
+	</camera>
+</world>

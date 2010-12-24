@@ -33,6 +33,10 @@
 class SoSensor;
 class SoTimerSensor;
 class Flock;
+<<<<<<< HEAD
+=======
+class Pcbird;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 class CyberGlove;
 class World;
 
@@ -70,21 +74,37 @@ public:
 		position of the camera in GraspIt.
 	*/
 	enum FlockMode{FLOCK_RELATIVE, FLOCK_ABSOLUTE, FLOCK_CAMERA};
+<<<<<<< HEAD
+=======
+	enum PcbirdMode{PCBIRD_ABSOLUTE, PCBIRD_CAMERA};
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 private:
 	//! The world that this dialog is connected to
 	World *mWorld;
 	//! Shows if the flock is currently being used
 	bool mFlockRunning;
+<<<<<<< HEAD
+=======
+	bool mPcbirdRunning;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//! Shows if the glove is currently being used
 	bool mGloveRunning;
 	//! The timer that fires at discrete intervals so we can update the readings
 	SoTimerSensor *mTimerSensor;
 	//! Interface to the raw Flock of Birds
 	Flock *mFlock;
+<<<<<<< HEAD
+=======
+	Pcbird *mPcbird;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//! Interface to raw Cyberglove
 	CyberGlove *mGlove;
 	//! The current running mode of the Flock
 	FlockMode mFlockMode;
+<<<<<<< HEAD
+=======
+	PcbirdMode mPcbirdMode;
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//! Keeps track of the camera flock transform, for the CAMERA flock mode of operation
 	FlockTransf mCameraFlockTran;
 	//! The number of birds in the Flock. For now, it's hard-coded in.
@@ -96,6 +116,10 @@ private:
 	void init(World *w);
 	//! Initialized the flock of birds
 	bool initFlock();
+<<<<<<< HEAD
+=======
+	bool initPcbird();
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	//! Initializes the Cyberglove
 	bool initGlove();
 
@@ -119,10 +143,18 @@ private:
 
 	//! Helper function that reads in a raw bird transform and returns it as a GraspIt transf.
 	transf SensorInputDlg::getBirdTran(int b);
+<<<<<<< HEAD
+=======
+	transf SensorInputDlg::getBirdTran();
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 private slots:
 	//! Resets all relative positions that new flock positions are computed relative to
 	void resetFlock();
+<<<<<<< HEAD
+=======
+	void resetPcbird();
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 
 public:
 	SensorInputDlg(World *w, QWidget *parent = 0) : QDialog(parent) {
@@ -134,6 +166,13 @@ public:
 						 SLOT(flockStartButton_clicked()));
 		QObject::connect(resetFlockButton, SIGNAL(clicked()), this, 
 						 SLOT(resetFlock()));
+<<<<<<< HEAD
+=======
+		QObject::connect(pcbirdStartButton, SIGNAL(clicked()), this, 
+						 SLOT(pcbirdStartButton_clicked()));
+		QObject::connect(resetPcbirdButton, SIGNAL(clicked()), this, 
+						 SLOT(resetPcbird()));
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		init(w);
 	}
 
@@ -144,6 +183,10 @@ public slots:
 	void gloveStartButton_clicked();
 	//! Starts or stops the Flock of Birds use
 	void flockStartButton_clicked();
+<<<<<<< HEAD
+=======
+	void pcbirdStartButton_clicked();
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 };
 
 #endif

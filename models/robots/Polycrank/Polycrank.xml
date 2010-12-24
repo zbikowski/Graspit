@@ -51,69 +51,118 @@
         <draggerScale>45.0</draggerScale>
 	</dof>
     <chain>
+<<<<<<< HEAD
 	<transform>
 		<rotation>-90 z</rotation>
             	<rotation>-90 y</rotation>
 		<translation>0 0 925</translation>
         </transform>
 	<joint type="Revolute">
+=======
+		<transform>
+		    <rotation>-90 z</rotation>
+            <rotation>-90 y</rotation>
+			<translation>0 0 0</translation>
+        </transform>
+		<joint type="Revolute">
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
             <theta>d0</theta>
             <d>220</d>
             <a>-299</a>
             <alpha>0</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
         </joint>
         <joint type="Revolute">
             <theta>d1</theta>
             <d>152</d>
             <a>180</a>
             <alpha>0</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
         </joint>
 		<joint type="Revolute">
             <theta>d2</theta>
             <d>335</d>
             <a>0</a>
             <alpha>90</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
         </joint>
 		<joint type="Revolute">
             <theta>d3</theta>
             <d>120</d>
             <a>151</a>
             <alpha>0</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
         </joint>
 	    	<joint type="Revolute">
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+        </joint>
+		<joint type="Revolute">
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
             <theta>d4</theta>
             <d>116</d>
             <a>151</a>
             <alpha>0</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
         </joint>
 		<joint type="Revolute">
             <theta>d5</theta>
             <d>62</d>
             <a>0</a>
             <alpha>90</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
         </joint>
 		<joint type="Revolute">
             <theta>d6</theta>
             <d>43</d>
             <a>0</a>
             <alpha>0</alpha>
+<<<<<<< HEAD
             <minValue>-3600</minValue>
             <maxValue>3600</maxValue>
         </joint>
 		<link dynamicJointType="Revolute">link1.xml</link>
         	<link dynamicJointType="Revolute">link2.xml</link>
+=======
+            <minValue>-180</minValue>
+            <maxValue>180</maxValue>
+        </joint>
+		<link dynamicJointType="Revolute">link1.xml</link>
+        <link dynamicJointType="Revolute">link2.xml</link>
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 		<link dynamicJointType="Revolute">link3.xml</link>
 		<link dynamicJointType="Revolute">link4.xml</link>
 		<link dynamicJointType="Revolute">link5.xml</link>

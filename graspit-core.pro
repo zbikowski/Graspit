@@ -35,6 +35,10 @@ HEADERS	+= include/barrett.h \
 	include/graspRecord.h \
 	include/gws.h \
 	include/gwsprojection.h \
+<<<<<<< HEAD
+=======
+	include/irp6.h \	
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	include/ivmgr.h \
 	include/jacobian.h \
 	include/joint.h \
@@ -117,6 +121,10 @@ SOURCES	+= src/arch.cpp \
 	src/gws.cpp \
 	src/gwsprojection.cpp \
 	src/humanHand.cpp \
+<<<<<<< HEAD
+=======
+	src/irp6.cpp \	
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	src/ivmgr.cpp \
 	src/jacobian.cpp \
 	src/joint.cpp \
@@ -212,9 +220,12 @@ FORMS += ui/mainWindow.ui \
 
 HEADERS += ui/mainWindow.h \
 	ui/archBuilderDlg.h \
+<<<<<<< HEAD
 	ui/PolycrankPanelDlg.h \
 	ui/PolycrankSaverDlg.h \
 	ui/PolycrankPlayerDlg.h \
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	ui/barrettHandDlg.h \
 	ui/bodyPropDlg.h \
 	ui/contactExaminerDlg.h \
@@ -232,9 +243,12 @@ HEADERS += ui/mainWindow.h \
 
 SOURCES += ui/mainWindow.cpp \
 	ui/archBuilderDlg.cpp \
+<<<<<<< HEAD
 	ui/PolycrankPanelDlg.cpp \
 	ui/PolycrankSaverDlg.cpp \
 	ui/PolycrankPlayerDlg.cpp \
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	ui/barrettHandDlg.cpp \
 	ui/bodyPropDlg.cpp \
 	ui/contactExaminerDlg.cpp \
@@ -255,7 +269,10 @@ IMAGES	= src/images/play.xpm \
 	src/images/pause.xpm \
 	src/images/splash.jpg \
 	src/images/logo.png \
+<<<<<<< HEAD
 	src/images/polycrank.png \
+=======
+>>>>>>> 6554d17ab7d0745685bbfae6b7ab153af601ca56
 	src/images/nocollide.xpm \
 	src/images/collide.xpm \
 	src/images/translateTool.xpm \
